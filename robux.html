@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top up Robux cepat, aman, dan praktis. Pesan lalu lanjutkan ke WhatsApp penjual.">
+  <title>ROBUX.ID — Top Up Robux</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="robux.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">R</span>
+      <span>ROBux<span class="brand-dot">.</span>ID</span>
+    </a>
+    <nav>
+      <a href="#order">Top Up</a>
+      <a href="#cara">Cara Order</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-wa" href="#order">Mulai Order <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> TOP UP ROBUX • PROSES VIA WHATSAPP</div>
+        <h1>Robux masuk.<br><span>Game makin seru.</span></h1>
+        <p>Pesan Robux dengan mudah. Isi data, kirim link Game Pass, pilih pembayaran, lalu lanjutkan order ke WhatsApp penjual.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#order">Top Up Sekarang <span>→</span></a>
+          <a class="btn btn-ghost" href="#cara">Lihat Cara Order</a>
+        </div>
+        <div class="trust-row">
+          <div><strong>⚡ Cepat</strong><span>Proses setelah pembayaran</span></div>
+          <div><strong>🔒 Praktis</strong><span>Order langsung ke WhatsApp</span></div>
+          <div><strong>🎮 Roblox</strong><span>Melalui Game Pass</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="robux-card">
+          <div class="coin coin-big">R$</div>
+          <div class="float-coin c1">R$</div>
+          <div class="float-coin c2">R$</div>
+          <div class="float-coin c3">R$</div>
+          <div class="card-label">ROBUX BALANCE</div>
+          <div class="balance">123,650 <small>R$</small></div>
+          <div class="balance-line"><span></span></div>
+          <div class="card-foot"><span>ROBLOX</span><b>TOP UP</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b>01</b><span>Pilih nominal</span></div>
+      <div><b>02</b><span>Isi data & Game Pass</span></div>
+      <div><b>03</b><span>Pilih pembayaran</span></div>
+      <div><b>04</b><span>Lanjut ke WhatsApp</span></div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ORDER ROBUX</div>
+          <h2>Buat pesananmu</h2>
+        </div>
+        <span class="secure">🔐 Data hanya untuk proses order</span>
+      </div>
+
+      <div class="order-layout">
+        <form id="orderForm" class="order-card" novalidate>
+          <div class="step-title"><span>01</span><div><b>Pilih nominal Robux</b><small>Harga dapat kamu ubah di file JavaScript.</small></div></div>
+          <div class="packages" id="packages"></div>
+
+          <div class="form-divider"></div>
+
+          <div class="step-title"><span>02</span><div><b>Data pembeli</b><small>Pastikan data yang kamu masukkan benar.</small></div></div>
+          <div class="form-grid">
+            <label>Nama lengkap
+              <input id="name" type="text" placeholder="Contoh: Andi Pratama" autocomplete="name">
+              <small class="error" id="nameError"></small>
+            </label>
+            <label>WhatsApp
+              <input id="phone" type="tel" placeholder="08xxxxxxxxxx" autocomplete="tel">
+              <small class="error" id="phoneError"></small>
+            </label>
+            <label class="full">Gmail
+              <input id="email" type="email" placeholder="nama@gmail.com" autocomplete="email">
+              <small class="error" id="emailError"></small>
+            </label>
+          </div>
+
+          <div class="step-title space-top"><span>03</span><div><b>Link Game Pass</b><small>Robux dikirim melalui Game Pass yang kamu jual.</small></div></div>
+          <label>URL Game Pass
+            <input id="gamepass" type="url" placeholder="https://www.roblox.com/game-pass/..." />
+            <small class="hint">Pastikan Game Pass sudah aktif dan harga sesuai nominal order.</small>
+            <small class="error" id="gamepassError"></small>
+          </label>
+
+         <div class="step-title space-top"><span>04</span><div><b>Metode pembayaran</b><small>Pilih metode yang akan kamu gunakan.</small></div></div>
+          <div class="payment-options">
+            <label class="pay-option"><input type="radio" name="payment" value="QRIS"><span class="pay-icon">▦</span><span><b>QRIS</b><small>Scan semua e-wallet/bank yang mendukung</small></span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="DANA"><span class="pay-icon">D</span><span><b>DANA</b><small>E-Wallet</small></span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="OVO"><span class="pay-icon">O</span><span><b>OVO</b><small>E-Wallet</small></span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="GoPay"><span class="pay-icon">G</span><span><b>GoPay</b><small>E-Wallet</small></span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="Bank Transfer"><span class="pay-icon">⌁</span><span><b>Bank Transfer</b><small>Transfer ke rekening penjual</small></span></label>
+          </div>
+          <small class="error" id="paymentError"></small>
+
+          <div class="summary">
+            <span>Total pembayaran</span>
+            <strong id="total">Rp0</strong>
+          </div>
+          <button class="btn btn-primary submit-btn" type="submit">Pesan & Lanjut ke WhatsApp <span>↗</span></button>
+          <p class="form-note">Dengan melanjutkan, kamu akan diarahkan ke WhatsApp penjual untuk konfirmasi pembayaran dan order.</p>
+        </form>
+
+        <aside class="side-panel">
+          <div class="mini-card live">
+            <div class="mini-top"><span class="live-dot"></span> STATUS TOKO</div>
+            <h3>Online & siap melayani</h3>
+            <p>Admin akan membalas order melalui WhatsApp.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">💬</div>
+            <h3>Order via WhatsApp</h3>
+            <p>Pesananmu otomatis dirangkum dalam pesan WhatsApp agar admin bisa memprosesnya.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">🎟️</div>
+            <h3>Game Pass wajib aktif</h3>
+            <p>Gunakan link Game Pass yang benar dan dapat dibeli agar proses tidak tertunda.</p>
+          </div>
+          <div class="warning"><b>⚠ Catatan</b><p>Jangan pernah memberikan password Roblox, kode OTP, atau cookie akun kepada siapa pun.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section how" id="cara">
+      <div class="section-head centered">
+        <div><div class="eyebrow">SIMPLE PROCESS</div><h2>Order dalam 4 langkah</h2></div>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><div class="step-icon">🛒</div><h3>Pilih Robux</h3><p>Pilih nominal Robux yang kamu inginkan.</p></div>
+        <div class="step"><span>02</span><div class="step-icon">📝</div><h3>Isi Data</h3><p>Masukkan nama, WhatsApp, Gmail, dan link Game Pass.</p></div>
+        <div class="step"><span>03</span><div class="step-icon">💳</div><h3>Bayar</h3><p>Pilih metode pembayaran dan ikuti instruksi admin.</p></div>
+        <div class="step"><span>04</span><div class="step-icon">🚀</div><h3>Robux Diproses</h3><p>Admin memproses order setelah pembayaran terkonfirmasi.</p></div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimoni">
+      <div class="section-head">
+        <div><div class="eyebrow">SOCIAL PROOF</div><h2>Testimoni pembeli</h2></div>
+        <span class="demo-badge"></span>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial"><div class="stars">★★★★</div><p>“Ordernya gampang, admin cepat balas. Tinggal kirim link Game Pass.”</p><div class="buyer"><span>AR</span><div><b>Andi R</b><small>testimoni pembeli</small></div></div></article>
+        <article class="testimonial"><div class="stars">★★★★★</div><p>“Formnya jelas dan pesan WhatsApp otomatis sudah ada detail order.”</p><div class="buyer"><span>NF</span><div><b>Nafa F</b><small>testimoni pembeli</small></div></div></article>
+             <article class="testimonial"><div class="stars">★★★★★</div><p>“Haga murah bner min?.”</p><div class="buyer"><span>RF</span><div><b>Rafael</b><small> testimoni pembeli</small></div></div></article>
+        <article class="testimonial"><div class="stars">★★★★</div><p>“Pembayaran QRIS praktis. Proses sesuai arahan admin.”</p><div class="buyer"><span>RF</span><div><b>Rafi F</b><small>testimoni pembeli</small></div></div></article>
+         <article class="testimonial"><div class="stars">★★★★★</div><p>“pengeiriman cepat & harga murah banget promo kah ini .”</p><div class="buyer"><span>RF</span><div><b>rara</b><small> testimoni pembeli</small></div></div></article>
+
+    </div>
+    </section>
+
+    
+
+    <section class="section faq" id="faq">
+      <div class="section-head centered"><div><div class="eyebrow">FAQ</div><h2>Pertanyaan umum</h2></div></div>
+      <div class="faq-list">
+        <details><summary>Kenapa harus menggunakan Game Pass?<span>+</span></summary><p>Website ini menggunakan alur Game Pass. Setelah pembeli membuat Game Pass dan mengirim link-nya, admin dapat memeriksa link tersebut sebelum memproses order.</p></details>
+        <details><summary>Apakah saya perlu memberikan password Roblox?<span>+</span></summary><p>Tidak. Jangan pernah memberikan password, OTP, cookie, atau kode keamanan akun. Cukup kirim data order dan link Game Pass sesuai instruksi.</p></details>
+        <details><summary>Ke mana saya membayar?<span>+</span></summary><p>Metode pembayaran yang tampil di website adalah pilihan. Nomor/rekening pembayaran sebaiknya dikirimkan oleh admin melalui WhatsApp setelah order.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">R</span><b>ROBux.ID</b></div>
+    <p>© 2026 ROBux.ID — Template toko top up Robux.</p>
+    <p class="footer-note">Roblox adalah merek dagang milik Roblox Corporation. Situs ini bukan situs resmi Roblox.</p>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <script src="robux.js"></script>
+</body>
+</html>
